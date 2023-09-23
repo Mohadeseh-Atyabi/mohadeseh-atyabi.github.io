@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Personal Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Personal
+  * Updated: Jun 18 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details ======= -->
+    <div id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <h2 class="portfolio-title">Smart Traffic Sign Management</h2>
+
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/thesis0.gif" alt="Traffic Sign Management gif">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/thesis1.png" alt="Lable Studio">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/thesis2.png" alt="Loss plot">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/thesis3.png" alt="Object detection and Distance estimation">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/thesis4.png" alt="Camera Calibration">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 portfolio-info">
+            <h3>Project information</h3>
+            <ul>
+              <li><strong>Category</strong>: Artificial Intelligence, Vision</li>
+              <li><strong>Project Tools</strong>: Python, OpenCV, Label Studio, GIS</li>
+              <li><strong>Project date</strong>: March, 2023</li>
+              <li><strong>Project URL</strong>: <a href="https://github.com/Mohadeseh-Atyabi/Smart-traffic-sign-management-system-based-on-mobile-phone-images">Github Repository</a></li>
+            </ul>
+
+            <h3>Project description</h3>
+            <p>
+              This project is my bachelor's thesis, and I defended it with a 20/20 grade. This project aims to develop a smart system to manage the traffic signs in a street. To be more precise, this system takes continuous images from the road, then detects traffic signs in the picture and calculates the distance between the detected sign and the camera (which is used to take pictures). Now, with the GPS information for each image (same as the camera's GPS data) and the distance between detected signs and the camera, the system estimates the approximate GPS location of traffic signs. Consequently, we can demonstrate the location of each type of traffic sign on a map, enabling municipalities to manage city traffic signs.
+            </p>
+            <p>
+              Different parts of the project are as below:
+            </p>
+            <p>
+              - <b>Collect a dataset:</b> We collected about 6000 images from the Tehran streets and labeled them using Label Studio. You can find the dataset in <a href="https://www.kaggle.com/datasets/mohadesehatyabi/iranian-traffic-sign-dataset"> Kaggle</a>.
+              <br>- <b>Fine-tune pre-trained model:</b> We decided on Faster-RCNN as our object detection model and fine-tuned it using our dataset. To do so, we split our dataset into train and valid parts with an 80% to 20% ratio. We used GPUs provided by Google Colab to train our model.
+              <br>- <b>Camera Calibration:</b> To estimate the distance between an object in an image and the camera, we need to calibrate our camera. We used the chessboard pattern of the OpenCV library to calibrate the camera.
+              <br>- <b>Distance Estimation:</b> We used Solve-PnP (one of the PnP distance estimation algorithms) to estimate the distance between the object and the camera. The methodology is to match the two-dimensional coordinates of a point with the three-dimensional coordinates of the same point, and in this way, calculate the distance between the object and the camera. Solve-PnP does this for four points and outputs rotation and transition matrices.
+              <br>- <b>Determining the geographic coordinates of detected objects:</b> We need to convert the distance in metric scale to the geographic scale. We used the Haversine formula to reach this goal.
+              <br>- <b>Visualize the results:</b> The last step is to visualize detected traffic signs on a map. We used Google's map in GIS software and visualized the system output.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div><!-- End Portfolio Details -->
+
+  </main><!-- End #main -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
